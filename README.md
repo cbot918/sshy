@@ -20,6 +20,8 @@ go build . && ./sshy
 ls
 mkdir
 touch 
+docker ps 
+sudo apt update
 ```
 etc
 # UNSUPPORT COMMAND
@@ -27,6 +29,7 @@ etc
 cd
 clear
 vim
+make
 ```
 
 # Todo
