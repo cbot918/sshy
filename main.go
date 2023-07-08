@@ -42,6 +42,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	lf("連線成功\n\n")
 
 	banner, err := sshy.getBanner()
 	if err != nil {

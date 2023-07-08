@@ -23,6 +23,7 @@ touch
 etc
 # UNSUPPORT COMMAND
 ```
+cd
 clear
 ```
 
