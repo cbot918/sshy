@@ -1,5 +1,5 @@
 # SSHY
-a convenient ssh client for practice purpose
+a convenient ssh client for experiment purpose
 # .env
 for example
 - URL="127.0.0.1:22"
@@ -15,6 +15,7 @@ or
 go build . && ./sshy
 ```
 # SUPPORT COMMAND
+只能用一些簡單指令
 ```
 ls
 mkdir
@@ -25,6 +26,7 @@ etc
 ```
 cd
 clear
+vim
 ```
 
 # Todo
