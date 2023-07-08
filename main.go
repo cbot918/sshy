@@ -18,7 +18,7 @@ var (
 
 type Config struct {
 	Url      string
-	User     string
+	Name     string
 	Password string
 	Key      string
 }
@@ -31,11 +31,12 @@ func main() {
 
 	cfg := &Config{
 		Url:      os.Getenv("URL"),
-		User:     os.Getenv("USER"),
+		Name:     os.Getenv("NAME"),
 		Password: os.Getenv("PASSWORD"),
+		Key:      os.Getenv("KEY"),
 	}
 
-	// client, err := ssh.DialWithKey("127.0.0.1:2222", "vagrant", "./private_key")
+	lf("%+v\n", cfg)
 
 	sshy, err := NewSSHy(cfg)
 	if err != nil {
@@ -72,12 +73,13 @@ type SSHy struct {
 }
 
 func NewSSHy(cfg *Config) (*SSHy, error) {
-	ssh, err := ssh.DialWithPasswd(cfg.Url, cfg.User, cfg.Password)
+	client, err := ssh.DialWithPasswd(cfg.Url, cfg.Name, cfg.Password)
 	if err != nil {
+		lg("1")
 		return nil, err
 	}
 	return &SSHy{
-		Client: ssh,
+		Client: client,
 	}, nil
 }
 

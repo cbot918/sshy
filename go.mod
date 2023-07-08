@@ -1,4 +1,4 @@
-module ssh
+module sshy
 
 go 1.19
 
